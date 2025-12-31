@@ -1,16 +1,11 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      <v-btn>test</v-btn>
+    <h1>{{ $t("welcome") }}</h1>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <v-btn>test</v-btn>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
