@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "prepare": "simple-git-hooks",
     "test:unit": "vitest"
   },
   "dependencies": {
@@ -23,8 +24,20 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "simple-git-hooks": "^2.13.1",
     "vite-plugin-vuetify": "^2.1.2",
     "vitest": "^4.0.16",
     "vuetify": "^3.11.6"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json,css,scss,md}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bunx lint-staged"
   }
 }
