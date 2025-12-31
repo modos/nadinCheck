@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -10,6 +11,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       vuetify({ autoImport: true }),
+      tailwindcss(),
     ],
     vue: {
       template: {
@@ -17,4 +19,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: ['./app/assets/css/main.css'],
 })
