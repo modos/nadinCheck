@@ -9,22 +9,31 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "simple-git-hooks",
-    "test:unit": "vitest"
+    "test": "NODE_OPTIONS=--no-deprecation vitest",
+    "test:unit": "NODE_OPTIONS=--no-deprecation vitest test/unit",
+    "test:server": "NODE_OPTIONS=--no-deprecation vitest test/server"
   },
   "dependencies": {
+    "@libsql/client": "^0.15.15",
     "@mdi/font": "^7.4.47",
     "@nuxt/eslint": "1.12.1",
     "@nuxt/hints": "1.0.0-alpha.5",
     "@nuxt/test-utils": "3.21.0",
     "@nuxtjs/i18n": "10.2.1",
     "@tailwindcss/vite": "^4.1.18",
+    "bcryptjs": "^3.0.3",
+    "drizzle-orm": "^0.45.1",
     "eslint": "^9.0.0",
+    "jsonwebtoken": "^9.0.3",
     "nuxt": "^4.2.2",
     "tailwindcss": "^4.1.18",
     "vue": "^3.5.26",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "drizzle-kit": "^0.31.8",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
     "simple-git-hooks": "^2.13.1",
