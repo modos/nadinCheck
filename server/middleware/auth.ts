@@ -4,6 +4,10 @@ import jwt from "jsonwebtoken";
 const JWT_SECRET = "your-secret-key";
 
 export default defineEventHandler((event) => {
+  if (!event.path.startsWith("/api/")) {
+    return;
+  }
+
   if (
     event.path.startsWith("/api/register") ||
     event.path.startsWith("/api/login")
