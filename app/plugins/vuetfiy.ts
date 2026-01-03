@@ -58,9 +58,9 @@ export default defineNuxtPlugin((app) => {
           colors: {
             background: "#121212",
             surface: "#1E1E1E",
-            primary: "#BB86FC", // Purple
-            secondary: "#03DAC6", // Cyan
-            accent: "#CF6679", // Pink (for errors in dark)
+            primary: "#BB86FC",
+            secondary: "#03DAC6",
+            accent: "#CF6679",
             error: "#CF6679",
             info: "#03DAC6",
             success: "#03DAC6",
