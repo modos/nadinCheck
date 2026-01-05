@@ -10,7 +10,8 @@ export default defineEventHandler((event) => {
 
   if (
     event.path.startsWith("/api/register") ||
-    event.path.startsWith("/api/login")
+    event.path.startsWith("/api/login") ||
+    event.path.startsWith("/api/cities")
   ) {
     return;
   }
