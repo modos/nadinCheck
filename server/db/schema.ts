@@ -8,3 +8,12 @@ export const users = sqliteTable("users", {
   email: text("email"),
   avatar: text("avatar"),
 });
+
+export const tasks = sqliteTable("tasks", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: integer("user_id")
+    .notNull()
+    .references(() => users.id),
+  title: text("title").notNull(),
+  completed: integer("completed", { mode: "boolean" }).notNull().default(false),
+});

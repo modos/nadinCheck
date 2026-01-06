@@ -1,7 +1,7 @@
 import { createError, defineEventHandler, getHeader } from "h3";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = "your-secret-key";
+const JWT_SECRET = "NadinCheckSecret";
 
 export default defineEventHandler((event) => {
   if (!event.path.startsWith("/api/")) {

@@ -1,4 +1,3 @@
-import {expect, test} from 'vitest';
+import { test } from "vitest";
 
-test('my test', () => {
-});
+test("my test", () => {});
